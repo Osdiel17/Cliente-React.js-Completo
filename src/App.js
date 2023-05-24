@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navii from "./Nav";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import AgregarLibro from './AgregarLibro';
+import ListaLibros from './listalibros';
+import EditarLibro from './EditarLibro';
+
 
 function App() {
   return (
     <div className="App">
+      <Navii/>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<ListaLibros />} />
+            <Route path="/agregar" element={<AgregarLibro />} />
+             <Route path='/edit/:id' element={<EditarLibro/>}/>
+          </Routes>
+        </BrowserRouter>
       </header>
-    </div>
+      </div>
   );
 }
-
+    
 export default App;

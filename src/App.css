@@ -7,14 +7,24 @@
   pointer-events: none;
 }
 
+h3, h2{
+  color: black;
+  text-shadow: 0.1em 0.1em 0.2em silver
+}
+
+label{
+  color: black;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+
 .App-header {
-  background-color: #282c34;
+  background-color: #869394;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
